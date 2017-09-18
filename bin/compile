@@ -55,12 +55,12 @@ else
   tar xzf $CACHE_FILE -C $VENDOR_DIR
 fi
 
-echo "-----> Writing policy file"
+echo "-----> Writing Policy file"
 mkdir -p $INSTALL_DIR/etc/ImageMagick
 cat > $INSTALL_DIR/policy.xml <<EOF
 <policymap>
   <policy domain="coder" rights="none" pattern="EPHEMERAL" />
-  <policy domain="coder" rights="none" pattern="HTTPS" />
+  <policy domain="coder" rights="read" pattern="HTTPS" />
   <policy domain="coder" rights="none" pattern="MVG" />
   <policy domain="coder" rights="none" pattern="MSL" />
 </policymap>
